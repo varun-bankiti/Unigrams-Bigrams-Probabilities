@@ -1,0 +1,25 @@
+Smoothed and Unsmoothed Unigrams and Bigram Probabilities Calculation
+
+Smoothing Technique: Good Turing Smoothing
+
+File Names:
+    Input:
+        a) Corpus: corpus.txt
+        b) Input Sentence: inputTokens.txt
+        
+    Ouput:
+        unSmoothedBigrams.py:
+            a) unSmoothedUnigrams.txt --> Contains Unsmoothed unigrams probabilites for the whole corpus (N Lines).
+            b) unSmoothedBigrams.txt  ->> Contains Unsmoothed bigrams probabilites for the whole corpus (N * N Lines).
+        smoothedBigrams.py:
+            a) smoothedUnigrams.txt --> Contains smoothed unigrams probabilites for the whole corpus (N Lines).
+            b) smoothedBigrams.txt  ->> Contains smoothed bigrams probabilites for the whole corpus (N * N Lines).
+                
+
+1) Corpus is tokenized with simple whitespace character(space,\n,\t,).
+
+2) It is assumed that the input sentence is given as each token per line with file name "inputTokens.txt".
+
+3) In smoothing fallowing are assumed:
+    a) While calculating c* for some c, if Nc+1=0, the next non zero Ni(i>c+1) value is taken as Nc+1.
+    b) For the maximum c, Nc+1 is assumber to be ZERO, hence c* for maximum c will alwasy be zero.    
